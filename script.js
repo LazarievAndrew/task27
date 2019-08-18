@@ -105,11 +105,11 @@ hamburger.addTopping(Humburger.mayonnaise);
 
 // // спросим сколько там калорий
 
-console.log('Calories: ' + hamburger.calculateCalories());
+console.log(`Calories: ${hamburger.calculateCalories()}`);
 
 // // сколько стоит
 
-console.log('Price: ' + hamburger.calculatePrice());
+console.log(`Price: ${hamburger.calculatePrice()}`);
 
 // // я тут передумал и решил добавить еще приправу
 
@@ -117,4 +117,4 @@ hamburger.addTopping(Humburger.flavoring);
 
 // // А сколько теперь стоит?
 
-console.log('Price with sauce: ' + hamburger.calculatePrice());
+console.log(`Price with sauce: ${hamburger.calculatePrice()}`);
