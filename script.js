@@ -22,10 +22,48 @@
 
 class Humburger {
 
-    constructor (options){
+    // Размеры гамбургеров:
+    static sizeSmall = {
+        cost : 50,
+        calorie : 20
+    };
+
+    static sizeLarge = {
+        cost : 100,
+        calorie : 40
+    };
+
+    // Виды начинок:
+    static cheese = {
+        cost : 10,
+        calorie : 20
+    };
+
+    static salad = {
+        cost : 20,
+        calorie : 5
+    };
+
+    static potatoes = {
+        cost : 15,
+        calorie : 10
+    };
+
+    // Добавки к гамбургеру:
+    static flavoring = {
+        cost : 15,
+        calorie : 0
+    };
+
+    static mayonnaise = {
+        cost : 20,
+        calorie : 5
+    };
+
+    constructor (size, stuffing){
         this.addingToppings = []
-        this.price = options.size.cost + options.stuffing.cost;
-        this.calories = options.size.calorie + options.stuffing.calorie;
+        this.price = size.cost + stuffing.cost;
+        this.calories = size.calorie + stuffing.calorie;
     }
 
     addTopping (toping) {  
@@ -48,56 +86,56 @@ class Humburger {
 };
 
 
+/////////////////////////////////////////////////////////////////////////
+// другой вариант записи статических методов
 
 // Размеры гамбургеров:
 
-Humburger.sizeSmall = {
-    cost : 50,
-    calorie : 20
-};
+// Humburger.sizeSmall = {
+//     cost : 50,
+//     calorie : 20
+// };
 
-Humburger.sizeLarge = {
-    cost : 100,
-    calorie : 40
-};
+// Humburger.sizeLarge = {
+//     cost : 100,
+//     calorie : 40
+// };
 
 // Виды начинок:
 
-Humburger.cheese = {
-    cost : 10,
-    calorie : 20
-};
+// Humburger.cheese = {
+//     cost : 10,
+//     calorie : 20
+// };
 
-Humburger.salad = {
-    cost : 20,
-    calorie : 5
-};
+// Humburger.salad = {
+//     cost : 20,
+//     calorie : 5
+// };
 
-Humburger.potatoes = {
-    cost : 15,
-    calorie : 10
-};
+// Humburger.potatoes = {
+//     cost : 15,
+//     calorie : 10
+// };
 
 // Добавки к гамбургеру:
 
-Humburger.flavoring = {
-    cost : 15,
-    calorie : 0
-};
+// Humburger.flavoring = {
+//     cost : 15,
+//     calorie : 0
+// };
 
-Humburger.mayonnaise = {
-    cost : 20,
-    calorie : 5
-};
+// Humburger.mayonnaise = {
+//     cost : 20,
+//     calorie : 5
+// };
+////////////////////////////////////////////////////////////////////////
 
 // Пример подсчета скопирован из примера задания:
 
 // маленький гамбургер с начинкой из сыра
 
-const hamburger = new Humburger ({
-    size : Humburger.sizeSmall,
-    stuffing : Humburger.cheese
-})
+const hamburger = new Humburger (Humburger.sizeSmall, Humburger.cheese);
 
 // // добавка из майонеза
 
